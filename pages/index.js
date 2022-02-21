@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 
-class AdviceGenerator extends React.Component {
+class AdviceSlipGenerator extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -15,15 +15,17 @@ class AdviceGenerator extends React.Component {
   componentDidMount = () => this.fetchNewQuote()
   
   fetchNewQuote = () => {
+    document.getElementsByTagName("button")[0].classList.add("animate-spin")
     const that = this
     fetch("https://api.adviceslip.com/advice")
 		.then(response => response.json())
     .then(data => {
-			that.setState({
-				id: data.slip.id,
+      that.setState({
+        id: data.slip.id,
 				advice: data.slip.advice
 			})
 		})
+    document.getElementsByTagName("button")[0].classList.remove("animate-spin")
 	}
 
   render = () =>
@@ -45,4 +47,4 @@ class AdviceGenerator extends React.Component {
   </>
 }
 
-export default AdviceGenerator
+export default AdviceSlipGenerator
