@@ -1,12 +1,7 @@
 # Frontend Mentor - Advice generator app solution
 
-<div style="display: flex; flex-direction: row; align-items: center;">
-<img src="https://raw.githubusercontent.com/github/explore/882462b8ecc337fd9c9b2572bc463a1cbc88fb6a/topics/tailwind/tailwind.png" width=64 height=64 style="border-radius: 1rem" />
-&nbsp;&nbsp;<h2>x</h2>&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/github/explore/28b02bbc9ad9f7a503c43775aebeb515dc2da5fc/topics/nextjs/nextjs.png" width=64 height=64 style="border-radius: 1rem" /></div>
-<br>
 This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-<br/><br/>
+<br/>
 
 ## Table of contents
 
