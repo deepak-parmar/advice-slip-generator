@@ -25,8 +25,8 @@ class AdviceSlipGenerator extends React.Component {
 				advice: data.slip.advice
 			})
 		})
-    .catch(function(error) {
-      alert("Failed to fetch! Please check your connection.")
+    .catch(() => {
+      alert("Something went wrong! Try again.")
     });
     document.getElementsByTagName("button")[0].classList.remove("animate-spin")
 	}
