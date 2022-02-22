@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [advice-generator](https://advice-generator.herokuapp.com/)
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/advice-slip-generator-tailwind-x-nextjs-a3iv6-mLO)
+- Live Site URL: [advice-generator](https://advice-generator.herokuapp.com)
 
 ## My process
 
