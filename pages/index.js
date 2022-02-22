@@ -37,14 +37,29 @@ class AdviceSlipGenerator extends React.Component {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advice Generator App | Frontend Mentor</title>
   </Head>
-  <main className={"flex flex-col items-center"}>
-    <section className={"bg-[#313a49] max-w-[32rem] h-[20rem] p-12 rounded-xl flex flex-col justify-center items-center"}>
+  <main className={"flex flex-col items-center p-4"}>
+    <section className={"bg-[#313a49] max-w-[32rem] min-h-[20rem] p-6 lg:p-12 rounded-xl flex flex-col justify-center items-center"}>
+      
+      {/* advice id */}
       <h1 className={"text-[#52ffa8] uppercase text-[11px] tracking-[4.8px] pb-6"}>Advice #{this.state.id}</h1>
-      <q id="quote" className={"text-[#cee3e9] leading-1 text-[1.54rem] text-center tracking-wide pb-6"}>{this.state.advice}</q>
-      <Image src="/images/pattern-divider-desktop.svg" width={415.81} height={14.98} alt="" />
+      
+      {/* advice */}
+      <q className={"text-[#cee3e9] leading-1 text-[1.54rem] text-center tracking-wide pb-6"}>
+        {this.state.advice}
+      </q>
+      
+      {/* Desktop divider */}
+      <div className={"hidden lg:block"}>
+        <Image src="/images/pattern-divider-desktop.svg" width={415.81} height={14.98} alt="" />
+      </div>
+
+      {/* Mobile divider */}
+      <div className={"block lg:hidden"}>
+        <Image src="/images/pattern-divider-mobile.svg" width={295} height={16} alt="" />
+      </div>
     </section>
     <button className={"bg-[#52ffa8] p-5 rounded-full w-[3.875rem] h-[3.875rem] -mt-8 transition ease-in-out duration-75 hover:drop-shadow-[0_0_18px_rgb(82,255,168)]"} onClick={this.fetchNewQuote}>
-      <Image src="/images/icon-dice.svg" width="22" height="22" alt="Get new quote button" />
+      <Image src="/images/icon-dice.svg" width="22" height="22" alt="Refresh advice button" />
     </button>
   </main>
   </>
