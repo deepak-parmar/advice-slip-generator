@@ -16,11 +16,11 @@ class AdviceSlipGenerator extends React.Component {
   
   fetchNewQuote = () => {
     document.getElementsByTagName("button")[0].classList.add("animate-spin")
-    const that = this
+    const state = this
     fetch("https://api.adviceslip.com/advice")
 		.then(response => response.json())
     .then(data => {
-      that.setState({
+      state.setState({
         id: data.slip.id,
 				advice: data.slip.advice
 			})
