@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/screenshot.png)
+![](https://advice-generator.herokuapp.com/images/screenshot.png)
 
 ### Links
 
