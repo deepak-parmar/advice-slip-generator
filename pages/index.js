@@ -18,20 +18,23 @@ class AdviceSlipGenerator extends React.Component {
   componentDidMount = () => this.fetchNewQuote()
   
   fetchNewQuote = () => {
-    document.getElementsByTagName("button")[0].classList.add("animate-spin")
+    const refreshBtn = document.getElementById("refreshBtn")
+    refreshBtn.classList.add("animate-spin")
+    
     const state = this
     fetch("https://api.adviceslip.com/advice")
-		.then(response => response.json())
-    .then(data => {
-      state.setState({
-        id: data.slip.id,
-				advice: data.slip.advice
-			})
-		})
-    .catch(() => {
-      alert("Something went wrong! Try again.")
-    });
-    document.getElementsByTagName("button")[0].classList.remove("animate-spin")
+      .then(response => response.json())
+      .then(data => {
+        state.setState({
+          id: data.slip.id,
+          advice: data.slip.advice
+        })
+      })
+      .catch(() => {
+        alert("Something went wrong! Try again.")
+      });
+
+    refreshBtn.classList.remove("animate-spin")
 	}
 
   render = () =>
@@ -61,7 +64,7 @@ class AdviceSlipGenerator extends React.Component {
         <Image src={mobileDivider} width={295} height={16} alt="" />
       </div>
     </section>
-    <button className={"bg-[#52ffa8] p-5 rounded-full w-[3.875rem] h-[3.875rem] -mt-8 transition ease-in-out duration-75 hover:drop-shadow-[0_0_18px_rgb(82,255,168)]"} onClick={this.fetchNewQuote}>
+    <button id="refreshBtn" className={"bg-[#52ffa8] p-5 rounded-full w-[3.875rem] h-[3.875rem] -mt-8 transition ease-in-out duration-75 hover:drop-shadow-[0_0_18px_rgb(82,255,168)]"} onClick={this.fetchNewQuote}>
       <Image src="/images/icon-dice.svg" width="22" height="22" alt="Refresh advice button" />
     </button>
   </main>
