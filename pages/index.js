@@ -2,6 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
+import desktopDivider from "../public/images/pattern-divider-desktop.svg"
+import mobileDivider from "../public/images/pattern-divider-mobile.svg"
+
 
 class AdviceSlipGenerator extends React.Component {
   constructor(props) {
@@ -50,12 +53,12 @@ class AdviceSlipGenerator extends React.Component {
       
       {/* Desktop divider */}
       <div className={"hidden lg:block"}>
-        <Image src="/images/pattern-divider-desktop.svg" width={415.81} height={14.98} alt="" />
+        <Image src={desktopDivider} width={415.81} height={14.98} alt="" />
       </div>
 
       {/* Mobile divider */}
       <div className={"block lg:hidden"}>
-        <Image src="/images/pattern-divider-mobile.svg" width={295} height={16} alt="" />
+        <Image src={mobileDivider} width={295} height={16} alt="" />
       </div>
     </section>
     <button className={"bg-[#52ffa8] p-5 rounded-full w-[3.875rem] h-[3.875rem] -mt-8 transition ease-in-out duration-75 hover:drop-shadow-[0_0_18px_rgb(82,255,168)]"} onClick={this.fetchNewQuote}>
