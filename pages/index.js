@@ -1,12 +1,13 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
 
 import desktopDivider from "../public/images/pattern-divider-desktop.svg"
 import mobileDivider from "../public/images/pattern-divider-mobile.svg"
 
 
 class AdviceSlipGenerator extends React.Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -15,8 +16,10 @@ class AdviceSlipGenerator extends React.Component {
     this.fetchNewQuote = this.fetchNewQuote.bind(this)
   }
 
+  // Fetches quote on load
   componentDidMount = () => this.fetchNewQuote()
   
+  // Fetches new quote
   fetchNewQuote = () => {
     const refreshBtn = document.getElementById("refreshBtn")
     refreshBtn.classList.add("animate-spin")
@@ -41,8 +44,9 @@ class AdviceSlipGenerator extends React.Component {
   <>
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advice Generator App | Frontend Mentor</title>
+    <title>Advice Generator App | Frontend Mentor Challenge</title>
   </Head>
+
   <main className={"flex flex-col items-center p-4"}>
     <section className={"bg-[#313a49] max-w-[32rem] min-h-[20rem] p-6 lg:p-12 rounded-xl flex flex-col justify-center items-center"}>
       
@@ -69,6 +73,7 @@ class AdviceSlipGenerator extends React.Component {
     </button>
   </main>
   </>
+
 }
 
 export default AdviceSlipGenerator
