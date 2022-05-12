@@ -52,7 +52,7 @@ class AdviceSlipGenerator extends React.Component {
 			<h1 className={"text-[#52ffa8] uppercase text-[11px] tracking-[4.8px] pb-6"}>Advice #{this.state.id}</h1>
 			
 			{/* advice */}
-			<q className={"text-[#cee3e9] leading-1 text-[1.54rem] text-center tracking-wide pb-6"}>
+			<q className={"text-[#cee3e9] leading-1 text-[1.54rem] text-center select-all tracking-wide pb-6"}>
 				{this.state.advice}
 			</q>
 			
