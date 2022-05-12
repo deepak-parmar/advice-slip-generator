@@ -1,4 +1,5 @@
 import '/styles/build.css'
+import "./global.css"
 
 
 function MyApp({ Component, pageProps }) {
