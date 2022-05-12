@@ -22,7 +22,7 @@ class MyDocument extends Document {
 				<link href={"https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"} rel="stylesheet" />
 			</Head>
 
-			<body className={"bg-[#202632] h-screen grid place-content-center"} style={{ fontFamily: '"Manrope", "sans-serif"' }}>
+			<body className={"bg-[#202632] h-screen grid place-content-center"}>
 				<Main />
 				<NextScript />
 			</body>
