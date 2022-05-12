@@ -1,5 +1,6 @@
 {
   "name": "advice-slip-generator",
+  "homepage": "https://deepak-parmar.github.io/advice-slip-generator",
   "description": "Advice slip generating app using Advice Slip API",
   "author": "Deepak Parmar",
   "license": "ISC",
@@ -8,9 +9,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "watch-css": "npx tailwindcss -o styles/build.css --minify --watch"
+    "watch-css": "npx tailwindcss -o styles/build.css --minify --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "next": "latest",
     "react": "17.0.2",
     "react-dom": "17.0.2"
