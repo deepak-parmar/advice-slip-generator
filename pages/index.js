@@ -66,8 +66,8 @@ class AdviceSlipGenerator extends React.Component {
 				<Image src={mobileDivider} width={295} height={16} alt="" />
 			</div>
 		</section>
-		<button id="refreshBtn" className={"bg-[#52ffa8] p-5 rounded-full w-[3.875rem] h-[3.875rem] -mt-8 transition ease-in-out duration-75 hover:drop-shadow-[0_0_18px_rgb(82,255,168)]"} onClick={this.fetchNewQuote}>
-			<Image src="/images/icon-dice.svg" width="22" height="22" alt="Refresh advice button" />
+		<button id="refreshBtn" className={"bg-[#52ffa8] p-5 rounded-full w-[3.875rem] h-[3.875rem] -mt-8 transition ease-in-out duration-75 hover:drop-shadow-[0_0_18px_rgb(82,255,168)]"} aria-label="Refresh advice" onClick={this.fetchNewQuote}>
+			<Image src="/images/icon-dice.svg" width="22" height="22" alt="" />
 		</button>
 	</main>
 	</>
