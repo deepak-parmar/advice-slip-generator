@@ -1,0 +1,19 @@
+{
+  "headers": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "https://advice-slip-generator-deepak-parmar.vercel.app"
+        }
+      ],
+      "headers" : [
+        {
+          "key" : "X-Robots-Tag",
+          "value" : "index"
+        }
+      ]
+    }
+  ]
+}
